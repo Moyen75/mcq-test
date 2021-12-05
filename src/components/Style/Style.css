@@ -29,3 +29,29 @@
 .start-page h4{
     color: #373434;
 }
+.quiz-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #6A1CE8;
+}
+.quiz{
+    text-align: left;
+    background-color: #FCEAFE;
+    margin: 15px;
+    padding: 40px;
+    border-radius: 5px;
+}
+.quiz label{
+    display: block;
+    margin-left: 5px;
+}
+.time-counter{
+    display: flex;
+    background-color: #FCEAFE;
+    margin: 15px;
+    justify-content: space-between;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
