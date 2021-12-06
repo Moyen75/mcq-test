@@ -47,6 +47,10 @@
     display: block;
     margin-left: 5px;
 }
+.quiz label input[type='radio']:checked{
+    color: gray;
+    background-color: gray;
+}
 .time-counter{
     display: flex;
     background-color: #FCEAFE;
