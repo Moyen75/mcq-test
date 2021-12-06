@@ -48,8 +48,8 @@
     margin-left: 5px;
 }
 .quiz label input[type='radio']:checked{
-    color: gray;
-    background-color: gray;
+    color: green;
+    background-color: green;
 }
 .time-counter{
     display: flex;

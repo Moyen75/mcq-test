@@ -73,8 +73,11 @@ const Quize = (props) => {
                         <div className='all-quiz'>
                             {questions?.map(q => <div className='quiz'>
                                 <h3>{q.id}.{q.title}</h3>
-                                {q.options?.map(option => <label htmlFor={option} ><input type="radio" onClick={() => handleInput(q.id, option)} name={`${option}${q.id}`} id={option} value={option} /> {option}</label>)}
-
+                                {q.options?.map(option =>
+                                    <div>
+                                        <label><input type="radio" onClick={() => handleInput(q.id, option)} name={q.title} id={option} value={option} /> {option}</label>
+                                    </div>
+                                )}
                             </div>)}
                         </div>
                         <div className='finish'>
