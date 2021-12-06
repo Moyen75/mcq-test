@@ -63,24 +63,26 @@ const Quize = (props) => {
 
     return (
         <div>
-            <div className='quiz-page'>
-                <div className='quiz-box'>
-                    <div className='time-counter'>
-                        <h4>Remaining time</h4>
-                        <h4>00:{minutes > 9 ? minutes : `0${minutes}`}:{seconds > 9 ? seconds : `0${seconds}`}</h4>
-                    </div>
-                    <div className='all-quiz'>
-                        {questions?.map(q => <div className='quiz'>
-                            <h3>{q.id}.{q.title}</h3>
-                            {q.options?.map(option => <label htmlFor={option} ><input type="radio" onClick={() => handleInput(q.id, option)} name={option} id={option} /> {option}</label>)}
+            {
+                questions && <div className='quiz-page'>
+                    <div className='quiz-box'>
+                        <div className='time-counter'>
+                            <h4>Remaining time</h4>
+                            <h4>00:{minutes > 9 ? minutes : `0${minutes}`}:{seconds > 9 ? seconds : `0${seconds}`}</h4>
+                        </div>
+                        <div className='all-quiz'>
+                            {questions?.map(q => <div className='quiz'>
+                                <h3>{q.id}.{q.title}</h3>
+                                {q.options?.map(option => <label htmlFor={option} ><input type="radio" onClick={() => handleInput(q.id, option)} name={option} id={option} /> {option}</label>)}
 
-                        </div>)}
-                    </div>
-                    <div className='finish'>
-                        <button className='finish-button' onClick={handleFinish}>Finish</button>
+                            </div>)}
+                        </div>
+                        <div className='finish'>
+                            <button className='finish-button' onClick={handleFinish}>Finish</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
 
         </div>
     );
