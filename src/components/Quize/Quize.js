@@ -76,9 +76,12 @@ const Quize = (props) => {
 
                         </div>)}
                     </div>
+                    <div className='finish'>
+                        <button className='finish-button' onClick={handleFinish}>Finish</button>
+                    </div>
                 </div>
             </div>
-            <button onClick={handleFinish}>Finish</button>
+
         </div>
     );
 };
